@@ -10,6 +10,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .database import Base, engine
 from .routers import ai, complaints
+import traceback
+
+try:
+    from .config import settings
+    from .database import Base, engine
+    from .routers import ai, complaints
+except Exception:
+    traceback.print_exc()
+    raise
 
 # Auto-create tables on startup. For a real deployment you'd use Alembic;
 # for a 2-day take-home this is fine.

@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     groq_api_key: str = "missing"
     groq_model: str = "gemma2-9b-it"
 
-    database_url: str = "sqlite:///./complaints.db"
+    database_url: str = "sqlite:///complaints.db"
     frontend_origin: str = "http://localhost:5173"
 
 
